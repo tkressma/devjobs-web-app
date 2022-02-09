@@ -59,6 +59,7 @@ h6 {
   --text-secondary: #6e8098;
   --accent: #5964e0;
   --accent-hover: #939bf4;
+  --theme-ctrl-bg: #ffffff;
 }
 [data-theme="dark"] {
   --bg: #121721;
