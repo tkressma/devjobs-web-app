@@ -5,12 +5,19 @@ import moonIcon from "../../assets/desktop/icon-moon.svg";
 function ThemeControl(props) {
   return (
     <div className={styles.controls}>
-      <img src={sunIcon} alt="An icon of the sun (light mode)" />
-      <div className={styles["toggle__btn"]}>
-        <input type="checkbox" />
-        <span className={styles.slider}></span>
-      </div>
-      <img src={moonIcon} alt="An icon of the moon (dark mode)" />
+      <img
+        src={sunIcon}
+        className={styles.sun}
+        alt="An icon of the sun (light mode)"
+      />
+
+      <input className={styles.toggle} type="checkbox" />
+
+      <img
+        src={moonIcon}
+        className={styles.moon}
+        alt="An icon of the moon (dark mode)"
+      />
     </div>
   );
 }
