@@ -10,3 +10,19 @@
   align-items: center;
   height: 100%;
 }
+
+@media (min-width: 768px) {
+  .header {
+    background: url(../../assets/tablet/bg-pattern-header.svg) no-repeat;
+    background-size: cover;
+    border-bottom-left-radius: 100px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .header {
+    background: url(../../assets/desktop/bg-pattern-header.svg) no-repeat;
+    background-size: cover;
+    border-bottom-left-radius: 100px;
+  }
+}

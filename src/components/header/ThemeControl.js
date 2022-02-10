@@ -3,6 +3,12 @@ import styles from "./ThemeControl.module.css";
 import sunIcon from "../../assets/desktop/icon-sun.svg";
 import moonIcon from "../../assets/desktop/icon-moon.svg";
 function ThemeControl(props) {
+  const themeHandler = () => {
+    const newTheme = props.theme === "dark" ? "light" : "dark";
+    props.switchTheme(newTheme);
+    console.log("test");
+  };
+
   return (
     <div className={styles.controls}>
       <img
@@ -11,7 +17,12 @@ function ThemeControl(props) {
         alt="An icon of the sun (light mode)"
       />
 
-      <input className={styles.toggle} type="checkbox" />
+      <input
+        className={styles.toggle}
+        type="checkbox"
+        onClick={themeHandler}
+        checked={props.theme === "dark" ? true : false}
+      />
 
       <img
         src={moonIcon}
