@@ -1,8 +1,12 @@
 .header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   height: 136px;
   background: url(../../assets/mobile/bg-pattern-header.svg) no-repeat;
   background-size: cover;
+}
+
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
 }

@@ -1,0 +1,19 @@
+.container {
+  width: 87.2%;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 89.714%;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 89.714%;
+    margin: 0 auto;
+    max-width: 1110px;
+  }
+}

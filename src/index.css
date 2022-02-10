@@ -1,5 +1,23 @@
 @import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
 
+:root {
+  --bg: #f4f6f8;
+  --card-bg: #ffffff;
+  --text-primary: #19202d;
+  --text-secondary: #6e8098;
+  --accent: #5964e0;
+  --accent-hover: #939bf4;
+  --theme-ctrl-bg: #ffffff;
+}
+[data-theme="dark"] {
+  --bg: #121721;
+  --card-bg: #19202d;
+  --text-primary: #ffffff;
+  --text-secondary: #6e8098;
+  --accent: #5964e0;
+  --accent-hover: #939bf4;
+}
+
 body {
   margin: 0;
   font-family: "Kumbh Sans", sans-serif;
@@ -7,6 +25,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
+  background-color: var(--bg);
 }
 
 code {
@@ -50,22 +69,4 @@ h4,
 h5,
 h6 {
   overflow-wrap: break-word;
-}
-
-:root {
-  --bg: #f4f6f8;
-  --card-bg: #ffffff;
-  --text-primary: #19202d;
-  --text-secondary: #6e8098;
-  --accent: #5964e0;
-  --accent-hover: #939bf4;
-  --theme-ctrl-bg: #ffffff;
-}
-[data-theme="dark"] {
-  --bg: #121721;
-  --card-bg: #19202d;
-  --text-primary: #ffffff;
-  --text-secondary: #6e8098;
-  --accent: #5964e0;
-  --accent-hover: #939bf4;
 }
