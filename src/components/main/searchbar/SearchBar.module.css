@@ -1,0 +1,21 @@
+.search__form {
+  display: flex;
+  align-items: center;
+  position: relative;
+  background-color: var(--card-bg);
+  border-radius: 6px;
+  height: 80px;
+  top: -40px;
+  transition: all 0.3s;
+  font-size: 1rem;
+  padding: 1rem;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.search__btn .search__filter_btn {
+}
+
+.search__button {
+  background-color: var(--accent);
+}
