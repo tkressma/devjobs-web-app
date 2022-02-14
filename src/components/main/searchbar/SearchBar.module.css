@@ -12,10 +12,3 @@
   max-width: 500px;
   margin: 0 auto;
 }
-
-.search__btn .search__filter_btn {
-}
-
-.search__button {
-  background-color: var(--accent);
-}
