@@ -1,12 +1,14 @@
 import React from "react";
+import MediaQuery, { useMediaQuery } from "react-responsive";
 import SearchBar from "./searchbar/SearchBar";
 import Container from "../UI/Container";
-import SearchBarMobile from "./searchbar/SearchBarMobile";
 export default function Main(props) {
+  const isMobile = useMediaQuery({ query: "(max-width: 600px)" });
+
   return (
     <main>
       <Container>
-        <SearchBarMobile />
+        <SearchBar isMobile={isMobile} />
       </Container>
     </main>
   );
