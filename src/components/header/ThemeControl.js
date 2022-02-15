@@ -22,7 +22,7 @@ function ThemeControl(props) {
         className={styles.toggle}
         type="checkbox"
         onClick={themeHandler}
-        checked={props.theme === "dark" ? true : false}
+        defaultChecked={props.theme === "dark" ? true : false}
         aria-label={`Toggle ${newTheme} mode`}
       />
 

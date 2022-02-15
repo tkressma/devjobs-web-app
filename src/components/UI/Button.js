@@ -1,4 +1,5 @@
 import styles from "./Button.module.css";
 export default function Button(props) {
-  return <button className={styles.button}>{props.children}</button>;
+  let styling = `${styles.button} ${props.className ? props.className : ""}`;
+  return <button className={styling}>{props.children}</button>;
 }

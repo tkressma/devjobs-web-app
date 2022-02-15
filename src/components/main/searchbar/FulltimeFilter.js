@@ -3,11 +3,11 @@ import { useMediaQuery } from "react-responsive";
 
 export default function FulltimeFilter(props) {
   const isTablet = useMediaQuery({
-    query: "(min-width: 767px) and (max-width: 1440px)",
+    query: "(min-width: 767px) and (max-width: 1000px)",
   });
 
   return (
-    <label for="fulltime" className={styles["search__fulltime"]}>
+    <label htmlFor="fulltime" className={styles["search__fulltime"]}>
       <input type="checkbox" id="fulltime" />
       {isTablet ? "Full Time" : "Full Time Only"}
     </label>

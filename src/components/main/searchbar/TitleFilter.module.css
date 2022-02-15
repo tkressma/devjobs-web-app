@@ -13,7 +13,7 @@
 
 @media (min-width: 768px) {
   .search__title_container {
-    max-width: 415px;
+    max-width: 447px;
     padding-right: 1rem;
     gap: 1rem;
   }
@@ -22,5 +22,11 @@
     width: 174px;
     overflow: hidden;
     padding: 0;
+  }
+}
+
+@media (min-width: 1100px) {
+  .search__title_container input {
+    width: 100%;
   }
 }

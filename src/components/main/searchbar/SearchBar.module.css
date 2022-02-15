@@ -24,3 +24,10 @@
     max-width: none;
   }
 }
+
+@media (min-width: 1200px) {
+  .search__button {
+    flex-grow: 1;
+    max-width: 123px;
+  }
+}

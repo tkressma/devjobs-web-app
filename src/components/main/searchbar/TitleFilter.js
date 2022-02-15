@@ -1,7 +1,10 @@
 import styles from "./TitleFilter.module.css";
 import searchIcon from "../../../assets/desktop/icon-search.svg";
+import { useMediaQuery } from "react-responsive";
 
 export default function TitleFilter(props) {
+  const isMobile = useMediaQuery({ query: "(min-width: 1100px)" });
+
   return (
     <div className={styles["search__title_container"]}>
       {!props.isMobile && (
@@ -11,7 +14,12 @@ export default function TitleFilter(props) {
           alt="A magnifying glass"
         />
       )}
-      <input type="text" placeholder="Filter by title..." />
+      <input
+        type="text"
+        placeholder={`Filter by title${
+          isMobile ? ", companies, expertise" : ""
+        }...`}
+      />
     </div>
   );
 }

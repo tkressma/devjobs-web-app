@@ -7,7 +7,9 @@ export default function FiltersModal(props) {
     <div className={styles.modal} aria-modal="true" aria-labelledby="filter">
       <LocationFilter />
       <FulltimeFilter />
-      <Button type="submit">Search</Button>
+      <Button type="submit" className={styles["search__button"]}>
+        Search
+      </Button>
     </div>
   );
 }
