@@ -1,0 +1,16 @@
+.modal {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  width: 100%;
+  max-width: 500px;
+  background-color: var(--card-bg);
+  border-radius: 6px;
+  border: 2px solid black;
+  height: 217px;
+  top: 225px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding-bottom: 1.5rem;
+  transition: 0.3s all;
+}

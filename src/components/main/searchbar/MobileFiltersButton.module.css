@@ -1,0 +1,10 @@
+.search__filter_btn {
+  border: none;
+  background-color: inherit;
+  margin-right: 1.5rem;
+}
+
+.search__filter_btn_icon {
+  width: 19.97px;
+  height: 20px;
+}

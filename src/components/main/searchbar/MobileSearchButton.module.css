@@ -1,0 +1,12 @@
+.search__mobile_btn {
+  border: none;
+  background-color: var(--accent);
+  padding: 0.875em;
+  border-radius: 6px;
+}
+
+.search__mobile_btn_icon {
+  width: 20px;
+  height: 20px;
+  filter: brightness(100);
+}

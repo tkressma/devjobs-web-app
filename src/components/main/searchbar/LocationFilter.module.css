@@ -1,0 +1,15 @@
+.search__location_container {
+  display: flex;
+  align-items: center;
+  padding: 1.5rem;
+  border-bottom: 1px solid hsla(214, 17%, 51%, 0.2);
+  gap: 1rem;
+}
+
+@media (min-width: 768px) {
+  .search__location_container {
+    border-bottom: none;
+    border-left: 1px solid hsla(214, 17%, 51%, 0.2);
+    border-right: 1px solid hsla(214, 17%, 51%, 0.2);
+  }
+}

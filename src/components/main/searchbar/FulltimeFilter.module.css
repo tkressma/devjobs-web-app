@@ -1,0 +1,44 @@
+.search__fulltime {
+  display: flex;
+  gap: 1rem;
+  font-weight: bold;
+  padding: 1.5rem;
+  cursor: pointer;
+}
+
+.search__fulltime input[type="checkbox"] {
+  display: flex;
+  justify-content: center;
+  appearance: none;
+  min-height: 24px;
+  min-width: 24px;
+  background-color: var(--text-primary);
+  border-radius: 3px;
+  opacity: 0.1;
+}
+
+.search__fulltime input[type="checkbox"]::after {
+  content: url("../../../assets/desktop/icon-check.svg");
+  display: none;
+}
+
+.search__fulltime input[type="checkbox"]:hover {
+  background-color: var(--accent-hover);
+  opacity: 1;
+}
+
+.search__fulltime input[type="checkbox"]:checked {
+  background-color: var(--accent);
+  opacity: 1;
+}
+
+.search__fulltime input[type="checkbox"]:hover::after,
+.search__fulltime input[type="checkbox"]:checked::after {
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .search__fulltime {
+    align-items: center;
+  }
+}
