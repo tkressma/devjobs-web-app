@@ -10,7 +10,9 @@ import LocationFilter from "./LocationFilter";
 import FulltimeFilter from "./FulltimeFilter";
 
 export default function SearchBar(props) {
-  // A conditional statement to determine whether or not the search button
+  // A conditional statement to determine whether or not the primary
+  // search button (on the search bar) should display the search icon (mobile)
+  // or text (desktop).be
   let searchBtn;
   if (props.isMobile) {
     searchBtn = (
