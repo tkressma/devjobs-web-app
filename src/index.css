@@ -59,7 +59,6 @@ textarea,
 select,
 label {
   font: inherit;
-  color: var(--text-primary);
 }
 
 p,
