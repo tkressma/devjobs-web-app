@@ -8,7 +8,7 @@ function Header(props) {
     <header className={styles.header}>
       <Container className={styles["header__container"]}>
         <a href="www.frontendmentor.io">
-          <img src={logo} />
+          <img src={logo} alt="DevJobs logo" aria-label="Frontendmentor" />
         </a>
         <ThemeControl switchTheme={props.switchTheme} theme={props.theme} />
       </Container>

@@ -12,7 +12,7 @@ export default function SearchBar(props) {
         className={styles["search__title"]}
       />
 
-      <div className={styles.other}>
+      <div className={styles.other} aria-modal="true" aria-labelledby="filter">
         <input type="text" placeholder="Filter by location..." />
 
         <label for="fulltime">
@@ -22,12 +22,27 @@ export default function SearchBar(props) {
         <button type="submit">Search</button>
       </div>
 
-      <butto className={styles["search__filter_btn"]}>
-        <img src={filterIcon} className={styles["search__filter_btn_icon"]} />
-      </butto>
+      <button
+        className={styles["search__filter_btn"]}
+        aria-label="More Filters"
+      >
+        <img
+          src={filterIcon}
+          className={styles["search__filter_btn_icon"]}
+          alt="Filter icon represented by a funnel"
+        />
+      </button>
 
-      <button type="submit" className={styles["search__mobile_btn"]}>
-        <img src={searchIcon} className={styles["search__mobile_btn_icon"]} />
+      <button
+        type="submit"
+        className={styles["search__mobile_btn"]}
+        aria-label="Search"
+      >
+        <img
+          src={searchIcon}
+          className={styles["search__mobile_btn_icon"]}
+          alt="Seach icon represented by a magnifying glass"
+        />
       </button>
     </form>
   );

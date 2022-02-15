@@ -15,6 +15,7 @@
 
 .search__form input {
   outline: none;
+  background-color: inherit;
   border: none;
 }
 

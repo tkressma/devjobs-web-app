@@ -3,8 +3,9 @@ import styles from "./ThemeControl.module.css";
 import sunIcon from "../../assets/desktop/icon-sun.svg";
 import moonIcon from "../../assets/desktop/icon-moon.svg";
 function ThemeControl(props) {
+  const newTheme = props.theme === "dark" ? "light" : "dark";
+
   const themeHandler = () => {
-    const newTheme = props.theme === "dark" ? "light" : "dark";
     props.switchTheme(newTheme);
     console.log("test");
   };
@@ -22,6 +23,7 @@ function ThemeControl(props) {
         type="checkbox"
         onClick={themeHandler}
         checked={props.theme === "dark" ? true : false}
+        aria-label={`Toggle ${newTheme} mode`}
       />
 
       <img
