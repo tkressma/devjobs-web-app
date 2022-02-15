@@ -56,8 +56,10 @@ svg {
 input,
 button,
 textarea,
-select {
+select,
+label {
   font: inherit;
+  color: var(--text-primary);
 }
 
 p,

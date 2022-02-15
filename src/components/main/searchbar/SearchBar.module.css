@@ -38,6 +38,45 @@
   gap: 1rem;
 }
 
+.search__fulltime {
+  display: flex;
+  gap: 1rem;
+  font-weight: bold;
+  padding: 1.5rem;
+  cursor: pointer;
+}
+
+.search__fulltime input[type="checkbox"] {
+  display: flex;
+  justify-content: center;
+  appearance: none;
+  height: 24px;
+  width: 24px;
+  background-color: var(--text-primary);
+  border-radius: 3px;
+  opacity: 0.1;
+}
+
+.search__fulltime input[type="checkbox"]::after {
+  content: url("../../../assets/desktop/icon-check.svg");
+  display: none;
+}
+
+.search__fulltime input[type="checkbox"]:hover {
+  background-color: var(--accent-hover);
+  opacity: 1;
+}
+
+.search__fulltime input[type="checkbox"]:checked {
+  background-color: var(--accent);
+  opacity: 1;
+}
+
+.search__fulltime input[type="checkbox"]:hover::after,
+.search__fulltime input[type="checkbox"]:checked::after {
+  display: block;
+}
+
 .search__filter_btn {
   border: none;
   background-color: inherit;
@@ -80,7 +119,7 @@
 
 .search__btn {
   padding: 1em 0.875em;
-  margin-top: 1.5rem;
+  margin: 0 1.5rem;
   background-color: var(--accent);
   border: none;
   border-radius: 6px;
