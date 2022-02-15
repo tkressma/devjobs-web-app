@@ -6,6 +6,11 @@
   gap: 1rem;
 }
 
+.pin {
+  width: 17px;
+  height: 24px;
+}
+
 @media (min-width: 768px) {
   .search__location_container {
     border-bottom: none;

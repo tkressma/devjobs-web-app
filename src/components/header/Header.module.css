@@ -11,6 +11,11 @@
   align-items: center;
 }
 
+.logo {
+  width: 115px;
+  height: 32px;
+}
+
 @media (min-width: 768px) {
   .header {
     height: 160px;
