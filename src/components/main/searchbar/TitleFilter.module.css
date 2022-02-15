@@ -3,18 +3,24 @@
   flex: 1;
 }
 
-.search__title {
-  border: none;
+.search__title_container input {
   padding-left: 0.5rem;
   width: 100%;
+  outline: none;
+  background-color: inherit;
+  border: none;
 }
 
 @media (min-width: 768px) {
   .search__title_container {
+    max-width: 415px;
+    padding-right: 1rem;
+    gap: 1rem;
   }
 
-  .search__title {
-    min-width: 182px;
-    padding-right: 1rem;
+  .search__title_container input {
+    width: 174px;
+    overflow: hidden;
+    padding: 0;
   }
 }

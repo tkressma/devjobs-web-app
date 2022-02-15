@@ -6,6 +6,13 @@
   gap: 1rem;
 }
 
+.search__location_container input {
+  width: 100%;
+  outline: none;
+  background-color: inherit;
+  border: none;
+}
+
 .pin {
   width: 17px;
   height: 24px;

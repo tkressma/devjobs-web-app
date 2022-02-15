@@ -11,11 +11,7 @@ export default function TitleFilter(props) {
           alt="A magnifying glass"
         />
       )}
-      <input
-        type="text"
-        placeholder="Filter by title..."
-        className={styles["search__title"]}
-      />
+      <input type="text" placeholder="Filter by title..." />
     </div>
   );
 }

@@ -13,12 +13,6 @@
   margin: 0 auto;
 }
 
-.search__form input {
-  outline: none;
-  background-color: inherit;
-  border: none;
-}
-
 .search__mobile_btn_icon {
   width: 20px;
   height: 20px;
