@@ -16,6 +16,10 @@ export default function SearchBar(props) {
     setFilterModalActive(true);
   };
 
+  const handleModalExit = () => {
+    setFilterModalActive(false);
+  };
+
   // This object holds the search values inputted by the user
   const [searchParams, setSearchParams] = useState({
     title: "",
@@ -76,6 +80,7 @@ export default function SearchBar(props) {
           <FiltersModal
             active={filterModalActive}
             onClick={handleSearch}
+            closeModal={handleModalExit}
             updateSearch={handleSearchParams}
           />
           <MobileFiltersButton onClick={handleFilterModal} />

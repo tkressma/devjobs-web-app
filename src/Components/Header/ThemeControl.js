@@ -7,7 +7,6 @@ function ThemeControl(props) {
 
   const themeHandler = () => {
     props.switchTheme(newTheme);
-    console.log("test");
   };
 
   return (
