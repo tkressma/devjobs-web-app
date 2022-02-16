@@ -8,6 +8,8 @@
   --accent: #5964e0;
   --accent-hover: #939bf4;
   --theme-ctrl-bg: #ffffff;
+  --company-site-btn-bg: hsl(235, 69%, 61%, 0.1);
+  --company-site-btn-text: #5964e0;
 }
 [data-theme="dark"] {
   --bg: #121721;
@@ -16,6 +18,8 @@
   --text-secondary: #6e8098;
   --accent: #5964e0;
   --accent-hover: #939bf4;
+  --company-site-btn-bg: hsl(0, 0%, 100%, 0.1);
+  --company-site-btn-text: #ffffff;
 }
 
 body {

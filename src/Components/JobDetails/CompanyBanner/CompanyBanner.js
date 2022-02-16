@@ -3,17 +3,20 @@ export default function CompanyBanner(props) {
   return (
     <article className={styles["company__banner"]}>
       <figure
-        className={styles["job__logo_container"]}
-        style={{ background: "`${logoBackground}red" }}
+        className={styles["company__logo_container"]}
+        style={{ background: "red" }}
       >
-        <img src="test" alt="logo"></img>
+        <img src="" alt="logo"></img>
       </figure>
 
-      <h1>Company</h1>
-      <p>scoot.com</p>
-      <button>
-        <a href="www.example.com">Company Site</a>
-      </button>
+      <div className={styles["company__details"]}>
+        <h1 className={styles["company__name"]}>Company</h1>
+        <p className={styles["company__website"]}>scoot.com</p>
+      </div>
+
+      <a href="www.example.com" className={styles["company__website_link"]}>
+        Company Site
+      </a>
     </article>
   );
 }
