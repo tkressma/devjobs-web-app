@@ -1,24 +1,36 @@
 import styles from "./JobPosting.module.css";
 export default function JobPosting(props) {
-  const logoBackground = `${props.job.logoBackground}`;
+  // Destructure job obj for readability
+  const {
+    logoBackground,
+    logo,
+    company,
+    postedAt,
+    contract,
+    position,
+    location,
+  } = props.job;
+
   return (
     <article role="listitem" className={styles["job__posting"]}>
       <figure
         className={styles["job__logo_container"]}
-        style={{ background: logoBackground }}
+        style={{ background: `${logoBackground}` }}
       >
-        <img src={`.${props.job.logo}`} alt={`${props.job.company} logo`}></img>
+        <img src={`.${logo}`} alt={`${company} logo`}></img>
       </figure>
+
       <div className={styles["job__overview"]}>
-        <p>{props.job.postedAt}</p>
+        <p>{postedAt}</p>
         <span className={styles["job__styled_seperator"]}>
           <b>&#183;</b>
         </span>
-        <p>{props.job.contract}</p>
+        <p>{contract}</p>
       </div>
-      <h2 className={styles["job__position"]}>{props.job.position}</h2>
-      <p className={styles["job__company"]}>{props.job.company}</p>
-      <span className={styles["job__location"]}>{props.job.location}</span>
+
+      <h2 className={styles["job__position"]}>{position}</h2>
+      <p className={styles["job__company"]}>{company}</p>
+      <span className={styles["job__location"]}>{location}</span>
     </article>
   );
 }

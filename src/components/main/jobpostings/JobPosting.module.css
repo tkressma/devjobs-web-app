@@ -33,6 +33,12 @@
   font-weight: bold;
   line-height: 25px;
   margin: 12px 0;
+  cursor: pointer;
+  transition: 0.3s all;
+}
+
+.job__position:hover {
+  color: var(--text-secondary);
 }
 
 .job__company {
