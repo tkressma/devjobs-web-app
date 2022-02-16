@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { useMediaQuery } from "react-responsive";
-import styles from "./Main.module.css";
+import styles from "./HomePage.module.css";
 import SearchBar from "./SearchBar/SearchBar";
 import Container from "../UI/Container";
 import JobPostings from "./JobPostings/JobPostings";
 import Button from "../UI/Button";
-export default function Main(props) {
+export default function HomePage(props) {
   const isMobile = useMediaQuery({ query: "(max-width: 767px)" });
 
   const [allJobs, setAllJobs] = useState([]);
@@ -36,21 +36,19 @@ export default function Main(props) {
   };
 
   return (
-    <main className={styles.main}>
-      <Container>
-        <SearchBar isMobile={isMobile} onSearch={getSearchResults} />
-        <JobPostings postings={filteredJobs.slice(0, visibleJobs)} />
+    <Container>
+      <SearchBar isMobile={isMobile} onSearch={getSearchResults} />
+      <JobPostings postings={filteredJobs.slice(0, visibleJobs)} />
 
-        {/* If there are no more jobs left to show, remove load more button */}
-        {visibleJobs < filteredJobs.length && (
-          <Button
-            onClick={showMoreHandler}
-            className={styles["main__loadmore_button"]}
-          >
-            Load More
-          </Button>
-        )}
-      </Container>
-    </main>
+      {/* If there are no more jobs left to show, remove load more button */}
+      {visibleJobs < filteredJobs.length && (
+        <Button
+          onClick={showMoreHandler}
+          className={styles["button__loadmore"]}
+        >
+          Load More
+        </Button>
+      )}
+    </Container>
   );
 }
