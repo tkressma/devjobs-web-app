@@ -8,6 +8,8 @@
   width: 100%;
   outline: none;
   background-color: inherit;
+  color: var(--text-primary);
+
   border: none;
 }
 

@@ -12,6 +12,7 @@
   outline: none;
   background-color: inherit;
   border: none;
+  color: var(--text-primary);
 }
 
 .pin {
