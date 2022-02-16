@@ -1,0 +1,22 @@
+.job__posting {
+  flex-basis: 100%;
+  margin-top: 49px;
+  max-width: 350px;
+  background: var(--card-bg);
+  border-radius: 6px;
+}
+
+@media (min-width: 768px) {
+  .job__posting {
+    margin-top: 65px;
+    flex-basis: 49.202%;
+    max-width: none;
+  }
+}
+
+@media (min-width: 1200px) {
+  .job__posting {
+    max-width: 350px;
+    flex-basis: 32.202%;
+  }
+}

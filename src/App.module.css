@@ -1,5 +1,5 @@
 .app {
   background-color: var(--bg);
   transition: all 0.3s;
-  height: 100vh;
+  height: 100%;
 }

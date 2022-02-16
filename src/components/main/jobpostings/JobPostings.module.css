@@ -1,0 +1,12 @@
+.postings {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .postings {
+    justify-content: space-between;
+  }
+}
