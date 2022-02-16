@@ -1,13 +1,13 @@
-import React, { useState } from "react";
+import React from "react";
 import styles from "./TitleFilter.module.css";
 import searchIcon from "../../../assets/desktop/icon-search.svg";
 import { useMediaQuery } from "react-responsive";
 
 export default function TitleFilter(props) {
   const isMobile = useMediaQuery({ query: "(min-width: 1100px)" });
-  const [titleInput, setTitleInput] = useState("");
-  const handleChange = (event) => {
-    setTitleInput(event.target.value);
+
+  const handleChange = (e) => {
+    props.updateSearch({ title: e.target.value });
   };
 
   return (
@@ -24,8 +24,7 @@ export default function TitleFilter(props) {
         placeholder={`Filter by title${
           isMobile ? ", companies, expertise" : ""
         }...`}
-        value={titleInput}
-        onChange={handleChange}
+        onChange={(e) => handleChange(e)}
       />
     </div>
   );

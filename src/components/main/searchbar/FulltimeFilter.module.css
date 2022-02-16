@@ -28,7 +28,7 @@
 
 .search__fulltime input[type="checkbox"]:hover {
   background-color: var(--accent-hover);
-  opacity: 0.25;
+  opacity: 0.5;
 }
 
 .search__fulltime input[type="checkbox"]:checked {

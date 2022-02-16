@@ -1,22 +1,42 @@
 import React, { useState } from "react";
 import styles from "./SearchBar.module.css";
-import FiltersModal from "./FiltersModal";
-import TitleFilter from "./TitleFilter";
-import MobileFiltersButton from "./MobileFiltersButton";
-import searchIcon from "../../../assets/desktop/icon-search.svg";
-
 import Button from "../../UI/Button";
+import MobileFiltersButton from "./MobileFiltersButton";
+import TitleFilter from "./TitleFilter";
 import LocationFilter from "./LocationFilter";
 import FulltimeFilter from "./FulltimeFilter";
+import FiltersModal from "./FiltersModal";
+import searchIcon from "../../../assets/desktop/icon-search.svg";
 
 export default function SearchBar(props) {
+  const [filterModalActive, setFilterModalActive] = useState(false);
+  const [searchParams, setSearchParams] = useState({
+    title: "",
+    location: "",
+    contract: "",
+  });
+
+  const handleSearch = (e) => {
+    e.preventDefault();
+    props.onSearch(searchParams);
+  };
+
+  const handleSearchParams = (input) => {
+    setSearchParams({ ...searchParams, ...input });
+  };
+
+  const handleFilterModal = (e) => {
+    e.preventDefault();
+    setFilterModalActive(true);
+  };
+
   // A conditional statement to determine whether or not the primary
   // search button (on the search bar) should display the search icon (mobile)
-  // or text (desktop).be
+  // or text (desktop)
   let searchBtn;
   if (props.isMobile) {
     searchBtn = (
-      <Button aria-label="Search" type="submit">
+      <Button aria-label="Search" type="submit" onClick={handleSearch}>
         <img
           src={searchIcon}
           className={styles["search__mobile_btn_icon"]}
@@ -26,31 +46,24 @@ export default function SearchBar(props) {
     );
   } else {
     searchBtn = (
-      <Button value="Search" type="submit" className={styles["search__button"]}>
+      <Button
+        value="Search"
+        type="submit"
+        onClick={handleSearch}
+        className={styles["search__button"]}
+      >
         Search
       </Button>
     );
   }
 
-  const [filterModalActive, setFilterModalActive] = useState(false);
-  const [fulltime, setFulltime] = useState(false);
-  const handleFilterModal = (event) => {
-    event.preventDefault();
-    setFilterModalActive(true);
-  };
-
-  const handleFullTime = () => {
-    setFulltime(!fulltime);
-    console.log("test");
-  };
-
   return (
     <form className={styles["search__form"]}>
-      <TitleFilter />
+      <TitleFilter updateSearch={handleSearchParams} />
       {!props.isMobile && (
         <>
-          <LocationFilter />
-          <FulltimeFilter onClick={handleFullTime} />
+          <LocationFilter updateSearch={handleSearchParams} />
+          <FulltimeFilter />
         </>
       )}
       {props.isMobile && (

@@ -8,22 +8,34 @@ import jobData from "../../data.json";
 export default function Main(props) {
   const isMobile = useMediaQuery({ query: "(max-width: 767px)" });
 
-  const [jobs, setJobs] = useState([]);
+  const [allJobs, setAllJobs] = useState([]);
+  const [filteredJobs, setFilteredJobs] = useState([]);
   const [visibleJobs, setVisible] = useState(9);
 
   useEffect(() => {
-    setJobs(jobData);
+    setAllJobs(jobData);
+    setFilteredJobs(jobData);
   }, []);
 
   const showMoreHandler = () => {
     setVisible(visibleJobs + 3);
   };
 
+  const getSearchResults = (searchParams) => {
+    const results = allJobs.filter(
+      (job) =>
+        job.position.toLowerCase().includes(searchParams.title.toLowerCase()) &&
+        job.location.toLowerCase().includes(searchParams.location.toLowerCase())
+    );
+
+    setFilteredJobs(results);
+  };
+
   return (
     <main className={styles.main}>
       <Container>
-        <SearchBar isMobile={isMobile} />
-        <JobPostings postings={jobs.slice(0, visibleJobs)} />
+        <SearchBar isMobile={isMobile} onSearch={getSearchResults} />
+        <JobPostings postings={filteredJobs.slice(0, visibleJobs)} />
         <button onClick={showMoreHandler}>Load more</button>
       </Container>
     </main>

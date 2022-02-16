@@ -5,7 +5,7 @@ export default function JobPostings(props) {
   return (
     <section className={styles["postings"]} role="list">
       {props.postings.map((posting) => (
-        <JobPosting job={posting} />
+        <JobPosting job={posting} key={posting.id}/>
       ))}
     </section>
   );

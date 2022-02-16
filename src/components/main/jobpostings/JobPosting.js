@@ -2,11 +2,7 @@ import styles from "./JobPosting.module.css";
 export default function JobPosting(props) {
   const logoBackground = `${props.job.logoBackground}`;
   return (
-    <article
-      role="listitem"
-      className={styles["job__posting"]}
-      key={props.job.key}
-    >
+    <article role="listitem" className={styles["job__posting"]}>
       <figure
         className={styles["job__logo_container"]}
         style={{ background: logoBackground }}
