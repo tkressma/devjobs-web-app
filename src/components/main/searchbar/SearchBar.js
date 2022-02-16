@@ -9,7 +9,14 @@ import FiltersModal from "./FiltersModal";
 import searchIcon from "../../../assets/desktop/icon-search.svg";
 
 export default function SearchBar(props) {
+  // This is for the mobile filter modal. If true, display, else hide.
   const [filterModalActive, setFilterModalActive] = useState(false);
+  const handleFilterModal = (e) => {
+    e.preventDefault();
+    setFilterModalActive(true);
+  };
+
+  // This object holds the search values inputted by the user
   const [searchParams, setSearchParams] = useState({
     title: "",
     location: "",
@@ -19,15 +26,13 @@ export default function SearchBar(props) {
   const handleSearch = (e) => {
     e.preventDefault();
     props.onSearch(searchParams);
+    if (setFilterModalActive) setFilterModalActive(false);
   };
 
+  // A single function passed to various components
+  // to update the search paramaters upon user input
   const handleSearchParams = (input) => {
     setSearchParams({ ...searchParams, ...input });
-  };
-
-  const handleFilterModal = (e) => {
-    e.preventDefault();
-    setFilterModalActive(true);
   };
 
   // A conditional statement to determine whether or not the primary
