@@ -1,2 +1,3 @@
-.main__container {
+.main {
+  background-color: var(--bg);
 }

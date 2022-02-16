@@ -12,6 +12,7 @@
   transform: translate(-50%, -50%);
   padding-bottom: 1.5rem;
   transition: 0.3s all;
+  z-index: 1;
 }
 
 .search__button {

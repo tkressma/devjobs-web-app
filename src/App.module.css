@@ -1,5 +1,6 @@
 .app {
   background-color: var(--bg);
   transition: all 0.3s;
-  height: 100%;
+  height: 100vh; /* Fallback for browsers that do not support Custom Properties */
+  min-height: -webkit-fill-available;
 }

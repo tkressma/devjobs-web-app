@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useMediaQuery } from "react-responsive";
+import styles from "./Main.module.css";
 import SearchBar from "./searchbar/SearchBar";
 import Container from "../UI/Container";
 import JobPostings from "./jobpostings/JobPostings";
@@ -8,7 +9,7 @@ export default function Main(props) {
   const isMobile = useMediaQuery({ query: "(max-width: 767px)" });
 
   const [jobs, setJobs] = useState([]);
-  const [visibleJobs, setVisible] = useState(3);
+  const [visibleJobs, setVisible] = useState(9);
 
   useEffect(() => {
     setJobs(jobData);
@@ -19,7 +20,7 @@ export default function Main(props) {
   };
 
   return (
-    <main>
+    <main className={styles.main}>
       <Container>
         <SearchBar isMobile={isMobile} />
         <JobPostings postings={jobs.slice(0, visibleJobs)} />
