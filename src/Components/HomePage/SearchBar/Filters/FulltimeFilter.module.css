@@ -22,7 +22,7 @@
 }
 
 .search__fulltime input[type="checkbox"]::after {
-  content: url("../../../assets/desktop/icon-check.svg");
+  content: url("../../../../assets/desktop/icon-check.svg");
   display: none;
 }
 

@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import styles from "./SearchBar.module.css";
 import Button from "../../UI/Button";
-import MobileFiltersButton from "./MobileFiltersButton";
-import TitleFilter from "./TitleFilter";
-import LocationFilter from "./LocationFilter";
-import FulltimeFilter from "./FulltimeFilter";
-import FiltersModal from "./FiltersModal";
+import MobileFiltersButton from "./Mobile/MobileFiltersButton";
+import TitleFilter from "./Filters/TitleFilter";
+import LocationFilter from "./Filters/LocationFilter";
+import FulltimeFilter from "./Filters/FulltimeFilter";
+import FiltersModal from "./Mobile/FiltersModal";
 import searchIcon from "../../../assets/desktop/icon-search.svg";
 
 export default function SearchBar(props) {
@@ -21,7 +21,7 @@ export default function SearchBar(props) {
   };
 
   // This object holds the search values inputted by the user
-  const [searchParams, setSearchParams] = useState({
+  const [searchFilters, setSearchFilters] = useState({
     title: "",
     location: "",
     contract: "",
@@ -33,14 +33,14 @@ export default function SearchBar(props) {
     // In that case, close the modal, else, do nothing.
     if (setFilterModalActive) setFilterModalActive(false);
 
-    // Send the searchParams object to the Main component to filter the results
-    props.onSearch(searchParams);
+    // Send the searchFilters object to the Main component to filter the results
+    props.onSearch(searchFilters);
   };
 
   // A single function passed to various components
   // to update the search paramaters upon user input
   const handleSearchParams = (input) => {
-    setSearchParams({ ...searchParams, ...input });
+    setSearchFilters({ ...searchFilters, ...input });
   };
 
   // A conditional statement to determine whether or not the primary
@@ -76,7 +76,7 @@ export default function SearchBar(props) {
       {!props.isMobile && (
         <>
           <LocationFilter updateSearch={handleSearchParams} />
-          <FulltimeFilter />
+          <FulltimeFilter updateSearch={handleSearchParams} />
         </>
       )}
       {props.isMobile && (

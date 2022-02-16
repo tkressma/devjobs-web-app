@@ -6,13 +6,13 @@ export default function FulltimeFilter(props) {
     query: "(min-width: 767px) and (max-width: 1000px)",
   });
 
+  const handleClick = (e) => {
+    props.updateSearch({ contract: e.target.checked ? "Full Time" : "" });
+  };
+
   return (
-    <label
-      htmlFor="fulltime"
-      className={styles["search__fulltime"]}
-      onClick={props.onClick}
-    >
-      <input type="checkbox" id="fulltime" onClick={props.onClick} />
+    <label htmlFor="fulltime" className={styles["search__fulltime"]}>
+      <input type="checkbox" id="fulltime" onChange={handleClick} />
       {isTablet ? "Full Time" : "Full Time Only"}
     </label>
   );

@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./TitleFilter.module.css";
-import searchIcon from "../../../assets/desktop/icon-search.svg";
+import searchIcon from "../../../../assets/desktop/icon-search.svg";
 import { useMediaQuery } from "react-responsive";
 
 export default function TitleFilter(props) {

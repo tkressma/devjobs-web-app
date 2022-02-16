@@ -1,7 +1,7 @@
 import styles from "./FiltersModal.module.css";
-import FulltimeFilter from "./FulltimeFilter";
-import LocationFilter from "./LocationFilter";
-import Button from "../../UI/Button";
+import FulltimeFilter from "../Filters/FulltimeFilter";
+import LocationFilter from "../Filters/LocationFilter";
+import Button from "../../../UI/Button";
 
 export default function FiltersModal(props) {
   return (
@@ -19,7 +19,7 @@ export default function FiltersModal(props) {
         aria-modal="true"
       >
         <LocationFilter updateSearch={props.updateSearch} />
-        <FulltimeFilter />
+        <FulltimeFilter updateSearch={props.updateSearch} />
         <Button
           type="submit"
           className={styles["search__button"]}

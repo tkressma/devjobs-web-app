@@ -1,5 +1,5 @@
 import styles from "./MobileFiltersButton.module.css";
-import filterIcon from "../../../assets/mobile/icon-filter.svg";
+import filterIcon from "../../../../assets/mobile/icon-filter.svg";
 
 export default function MobileFiltersButton(props) {
   return (

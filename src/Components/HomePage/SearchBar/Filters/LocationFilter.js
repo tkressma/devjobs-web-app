@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./LocationFilter.module.css";
-import locationIcon from "../../../assets/desktop/icon-location.svg";
+import locationIcon from "../../../../assets/desktop/icon-location.svg";
 
 export default function LocationFilter(props) {
   const handleChange = (e) => {
