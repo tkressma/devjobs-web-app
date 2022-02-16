@@ -7,8 +7,12 @@ export default function FulltimeFilter(props) {
   });
 
   return (
-    <label htmlFor="fulltime" className={styles["search__fulltime"]}>
-      <input type="checkbox" id="fulltime" />
+    <label
+      htmlFor="fulltime"
+      className={styles["search__fulltime"]}
+      onClick={props.onClick}
+    >
+      <input type="checkbox" id="fulltime" onClick={props.onClick} />
       {isTablet ? "Full Time" : "Full Time Only"}
     </label>
   );

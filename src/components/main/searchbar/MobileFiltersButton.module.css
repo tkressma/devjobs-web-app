@@ -2,6 +2,7 @@
   border: none;
   background-color: inherit;
   margin-right: 1.5rem;
+  cursor: pointer;
 }
 
 .search__filter_btn_icon {

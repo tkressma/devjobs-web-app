@@ -13,6 +13,14 @@
   padding-bottom: 1.5rem;
   transition: 0.3s all;
   z-index: 1;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.3s all;
+}
+
+.active {
+  visibility: visible;
+  opacity: 1;
 }
 
 .search__button {

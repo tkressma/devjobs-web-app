@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./SearchBar.module.css";
 import FiltersModal from "./FiltersModal";
 import TitleFilter from "./TitleFilter";
@@ -32,13 +32,33 @@ export default function SearchBar(props) {
     );
   }
 
+  const [filterModalActive, setFilterModalActive] = useState(false);
+  const [fulltime, setFulltime] = useState(false);
+  const handleFilterModal = (event) => {
+    event.preventDefault();
+    setFilterModalActive(true);
+  };
+
+  const handleFullTime = () => {
+    setFulltime(!fulltime);
+    console.log("test");
+  };
+
   return (
     <form className={styles["search__form"]}>
-      <TitleFilter isMobile={props.isMobile} />
-      {!props.isMobile && <LocationFilter />}
-      {!props.isMobile && <FulltimeFilter />}
-      {props.isMobile && <FiltersModal />}
-      {props.isMobile && <MobileFiltersButton />}
+      <TitleFilter />
+      {!props.isMobile && (
+        <>
+          <LocationFilter />
+          <FulltimeFilter onClick={handleFullTime} />
+        </>
+      )}
+      {props.isMobile && (
+        <>
+          <FiltersModal active={filterModalActive} />
+          <MobileFiltersButton onClick={handleFilterModal} />
+        </>
+      )}
       {searchBtn}
     </form>
   );
