@@ -9,9 +9,13 @@ export default function FiltersModal(props) {
       className={`${styles.modal} ${props.active && styles.active}`}
       aria-modal="true"
     >
-      <LocationFilter />
+      <LocationFilter updateSearch={props.updateSearch} />
       <FulltimeFilter />
-      <Button type="submit" className={styles["search__button"]}>
+      <Button
+        type="submit"
+        className={styles["search__button"]}
+        onClick={(e) => props.onClick(e)}
+      >
         Search
       </Button>
     </div>

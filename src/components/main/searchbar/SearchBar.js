@@ -25,8 +25,8 @@ export default function SearchBar(props) {
 
   const handleSearch = (e) => {
     e.preventDefault();
-    props.onSearch(searchParams);
     if (setFilterModalActive) setFilterModalActive(false);
+    props.onSearch(searchParams);
   };
 
   // A single function passed to various components
@@ -73,7 +73,11 @@ export default function SearchBar(props) {
       )}
       {props.isMobile && (
         <>
-          <FiltersModal active={filterModalActive} />
+          <FiltersModal
+            active={filterModalActive}
+            onClick={handleSearch}
+            updateSearch={handleSearchParams}
+          />
           <MobileFiltersButton onClick={handleFilterModal} />
         </>
       )}
