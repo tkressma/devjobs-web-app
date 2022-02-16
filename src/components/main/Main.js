@@ -5,6 +5,7 @@ import SearchBar from "./searchbar/SearchBar";
 import Container from "../UI/Container";
 import JobPostings from "./jobpostings/JobPostings";
 import jobData from "../../data.json";
+import Button from "../UI/Button";
 export default function Main(props) {
   const isMobile = useMediaQuery({ query: "(max-width: 767px)" });
 
@@ -36,7 +37,16 @@ export default function Main(props) {
       <Container>
         <SearchBar isMobile={isMobile} onSearch={getSearchResults} />
         <JobPostings postings={filteredJobs.slice(0, visibleJobs)} />
-        <button onClick={showMoreHandler}>Load more</button>
+
+        {/* If there are no more jobs left to show, remove load more button */}
+        {visibleJobs < filteredJobs.length && (
+          <Button
+            onClick={showMoreHandler}
+            className={styles["main__loadmore_button"]}
+          >
+            Load More
+          </Button>
+        )}
       </Container>
     </main>
   );

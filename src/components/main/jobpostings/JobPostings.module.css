@@ -20,6 +20,7 @@
 @media (min-width: 1100px) {
   .postings {
     margin: 4.0625rem auto 0;
+
     grid-template-columns: repeat(3, 1fr);
   }
 }
