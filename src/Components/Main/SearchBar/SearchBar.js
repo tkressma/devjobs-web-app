@@ -29,7 +29,11 @@ export default function SearchBar(props) {
 
   const handleSearch = (e) => {
     e.preventDefault();
+    // If the modal is open and a search occurs, then the user is searching from the modal.
+    // In that case, close the modal, else, do nothing.
     if (setFilterModalActive) setFilterModalActive(false);
+
+    // Send the searchParams object to the Main component to filter the results
     props.onSearch(searchParams);
   };
 

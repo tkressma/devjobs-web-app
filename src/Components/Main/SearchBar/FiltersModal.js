@@ -6,6 +6,7 @@ import Button from "../../UI/Button";
 export default function FiltersModal(props) {
   return (
     <>
+      {/* Blurred background to put focus on modal. */}
       <div
         className={`${styles["modal__background"]} ${
           props.active && styles["modal__active"]

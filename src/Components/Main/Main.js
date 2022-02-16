@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { useMediaQuery } from "react-responsive";
 import styles from "./Main.module.css";
-import SearchBar from "./searchbar/SearchBar";
+import SearchBar from "./SearchBar/SearchBar";
 import Container from "../UI/Container";
-import JobPostings from "./jobpostings/JobPostings";
-import jobData from "../../data.json";
+import JobPostings from "./JobPostings/JobPostings";
 import Button from "../UI/Button";
 export default function Main(props) {
   const isMobile = useMediaQuery({ query: "(max-width: 767px)" });
@@ -14,12 +13,16 @@ export default function Main(props) {
   const [visibleJobs, setVisible] = useState(9);
 
   useEffect(() => {
-    setAllJobs(jobData);
-    setFilteredJobs(jobData);
+    fetch("./data.json")
+      .then((res) => res.json())
+      .then((data) => {
+        setAllJobs(data);
+        setFilteredJobs(data);
+      });
   }, []);
 
   const showMoreHandler = () => {
-    setVisible(visibleJobs + 3);
+    setVisible((prevState) => prevState + 3);
   };
 
   const getSearchResults = (searchParams) => {
