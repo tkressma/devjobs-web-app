@@ -17,7 +17,7 @@
   height: 50px;
 }
 
-.job__overview {
+.job__posted {
   display: flex;
   gap: 0.75rem;
   color: var(--text-secondary);

@@ -1,0 +1,60 @@
+.job__post_header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3.125rem;
+  margin: 0 auto 3.125rem;
+  max-width: fit-content;
+}
+
+.job__posted {
+  display: flex;
+  gap: 0.75rem;
+  color: var(--text-secondary);
+}
+
+.job__styled_seperator {
+  transform: scale(2) translateY(-2px);
+}
+
+.job__title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  line-height: 25px;
+  color: var(--text-primary);
+  margin: 0.5rem 0;
+}
+
+.job__location {
+  font-size: 0.875rem;
+  font-weight: bold;
+  color: var(--accent);
+}
+
+.job__apply {
+  width: 100%;
+}
+
+@media (min-width: 600px) {
+  .job__post_header {
+    flex-direction: row;
+    max-width: none;
+  }
+
+  .job__apply {
+    width: 8.8125rem;
+    height: 3rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .job__details {
+    padding: 3rem;
+  }
+
+  .job__title {
+    font-size: 1.75rem;
+    line-height: 35px;
+  }
+}

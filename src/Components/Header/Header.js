@@ -7,7 +7,7 @@ function Header(props) {
   return (
     <header className={styles.header}>
       <Container className={styles["header__container"]}>
-        <a href="www.frontendmentor.io">
+        <a href="/">
           <img
             src={logo}
             alt="DevJobs logo"

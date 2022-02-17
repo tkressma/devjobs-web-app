@@ -33,7 +33,9 @@ export default function HomePage(props) {
         job.position
           .toLowerCase()
           .includes(searchFilters.title.toLowerCase()) &&
-        job.location.toLowerCase().includes(searchFilters.toLowerCase()) &&
+        job.location
+          .toLowerCase()
+          .includes(searchFilters.location.toLowerCase()) &&
         job.contract.includes(searchFilters.contract)
     );
 

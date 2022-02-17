@@ -57,22 +57,7 @@
   border-radius: 15px;
 }
 
-@media (min-width: 768px) {
-  .company__banner {
-    flex-direction: row;
-    justify-content: space-between;
-    max-width: 730px;
-    top: -40px;
-    margin: 0 auto;
-    padding: 0;
-  }
-
-  .company__details {
-    flex-grow: 1;
-    align-items: flex-start;
-    margin-left: 40px;
-  }
-
+@media (min-width: 600px) {
   .company__name {
     margin-top: 0;
   }
@@ -87,5 +72,19 @@
     height: 140px;
     transform: translateY(0);
     border-radius: 0px 0px 0px 6px;
+  }
+
+  .company__banner {
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 0;
+    max-width: 730px;
+    top: -40px;
+  }
+  .company__details {
+    flex-grow: 1;
+    align-items: flex-start;
+    margin-left: 40px;
   }
 }

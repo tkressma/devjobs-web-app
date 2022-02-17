@@ -3,7 +3,7 @@ import useLocalStorage from "use-local-storage";
 import styles from "./App.module.css";
 import Header from "./Components/Header/Header";
 import HomePage from "./Components/HomePage/HomePage";
-import JobDetails from "./Components/JobDetails/JobDetails";
+import JobDetailsPage from "./Components/JobDetailsPage/JobDetailsPage";
 import Main from "./Components/UI/Main";
 function App() {
   // Determine whether the user has a default color scheme (light or dark)
@@ -25,7 +25,7 @@ function App() {
         <Router>
           <Routes>
             <Route path="/" element={<HomePage />} />
-            <Route path="/job" element={<JobDetails />} />
+            <Route path="/job" element={<JobDetailsPage />} />
           </Routes>
         </Router>
       </Main>

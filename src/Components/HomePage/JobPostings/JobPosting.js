@@ -22,13 +22,13 @@ export default function JobPosting(props) {
           <img src={`.${logo}`} alt={`${company} logo`}></img>
         </figure>
 
-        <div className={styles["job__overview"]}>
-          <p>{postedAt}</p>
+        <p className={styles["job__posted"]}>
+          {postedAt}
           <span className={styles["job__styled_seperator"]}>
             <b>&#183;</b>
           </span>
-          <p>{contract}</p>
-        </div>
+          {contract}
+        </p>
 
         <h2 className={styles["job__position"]}>{position}</h2>
         <p className={styles["job__company"]}>{company}</p>
