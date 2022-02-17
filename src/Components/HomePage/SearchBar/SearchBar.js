@@ -76,7 +76,7 @@ export default function SearchBar(props) {
   return (
     <form className={styles["search__form"]}>
       <TitleFilter updateSearch={handleSearchParams} />
-      {isMobile && (
+      {!isMobile && (
         <>
           <LocationFilter updateSearch={handleSearchParams} />
           <FulltimeFilter updateSearch={handleSearchParams} />
