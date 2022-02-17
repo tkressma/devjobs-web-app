@@ -45,7 +45,7 @@ function App() {
               element={<JobDetailsPage jobs={filteredJobs} />}
             />
             <Route
-              path="/"
+              path="/*"
               element={
                 <HomePage
                   allJobs={allJobs}

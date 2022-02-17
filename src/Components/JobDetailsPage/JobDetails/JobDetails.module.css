@@ -4,6 +4,32 @@
   background: var(--card-bg);
   border-radius: 6px;
   padding: 2.5rem 1.5rem;
+  color: var(--text-secondary);
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.job__requirements_title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  line-height: 25px;
+  color: var(--text-primary);
+}
+
+.job__requirements_description {
+  margin: 1.75rem 0 1.5rem;
+}
+
+.job__role_title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  line-height: 25px;
+  color: var(--text-primary);
+}
+
+.job__role_description {
+  margin: 1.75rem 0 1.5rem;
 }
 
 @media (min-width: 768px) {

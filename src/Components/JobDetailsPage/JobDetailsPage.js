@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import Container from "../UI/Container";
 import CompanyBanner from "./CompanyBanner/CompanyBanner";
 import JobDetails from "./JobDetails/JobDetails";
@@ -9,7 +9,7 @@ export default function JobDetailsPage({ jobs }) {
   const selectedJob = jobs.find((job) => job.id === selectedJobId);
 
   return (
-    <Container>
+    <Container key={selectedJob.id}>
       <CompanyBanner job={selectedJob} />
       <JobDetails job={selectedJob} />
     </Container>

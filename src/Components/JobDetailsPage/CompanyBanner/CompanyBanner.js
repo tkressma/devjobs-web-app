@@ -1,4 +1,5 @@
 import styles from "./CompanyBanner.module.css";
+
 export default function CompanyBanner({ job }) {
   return (
     <article className={styles["company__banner"]}>
@@ -14,7 +15,7 @@ export default function CompanyBanner({ job }) {
         <p className={styles["company__website"]}>{job.website}</p>
       </div>
 
-      <a href="www.example.com" className={styles["company__website_link"]}>
+      <a href={job.website} className={styles["company__website_link"]}>
         Company Site
       </a>
     </article>

@@ -39,6 +39,7 @@
 @media (min-width: 600px) {
   .job__post_header {
     flex-direction: row;
+    margin: 0;
     max-width: none;
   }
 
