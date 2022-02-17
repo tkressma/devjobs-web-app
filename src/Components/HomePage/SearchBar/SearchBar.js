@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useMediaQuery } from "react-responsive";
 import styles from "./SearchBar.module.css";
 import Button from "../../UI/Button";
 import MobileFiltersButton from "./Mobile/MobileFiltersButton";
@@ -9,6 +10,8 @@ import FiltersModal from "./Mobile/FiltersModal";
 import searchIcon from "../../../assets/desktop/icon-search.svg";
 
 export default function SearchBar(props) {
+  const isMobile = useMediaQuery({ query: "(max-width: 767px)" });
+
   // This is for the mobile filter modal. If true, display, else hide.
   const [filterModalActive, setFilterModalActive] = useState(false);
   const handleFilterModal = (e) => {
@@ -47,7 +50,7 @@ export default function SearchBar(props) {
   // search button (on the search bar) should display the search icon (mobile)
   // or text (desktop)
   let searchBtn;
-  if (props.isMobile) {
+  if (isMobile) {
     searchBtn = (
       <Button aria-label="Search" type="submit" onClick={handleSearch}>
         <img
@@ -73,13 +76,13 @@ export default function SearchBar(props) {
   return (
     <form className={styles["search__form"]}>
       <TitleFilter updateSearch={handleSearchParams} />
-      {!props.isMobile && (
+      {isMobile && (
         <>
           <LocationFilter updateSearch={handleSearchParams} />
           <FulltimeFilter updateSearch={handleSearchParams} />
         </>
       )}
-      {props.isMobile && (
+      {isMobile && (
         <>
           <FiltersModal
             active={filterModalActive}
