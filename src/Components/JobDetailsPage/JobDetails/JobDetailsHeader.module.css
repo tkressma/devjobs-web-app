@@ -4,7 +4,7 @@
   justify-content: space-between;
   align-items: center;
   gap: 3.125rem;
-  margin: 0 auto 3.125rem;
+  margin: 0 auto;
   max-width: fit-content;
 }
 
@@ -32,20 +32,11 @@
   color: var(--accent);
 }
 
-.job__apply {
-  width: 100%;
-}
-
 @media (min-width: 600px) {
   .job__post_header {
     flex-direction: row;
     margin: 0;
     max-width: none;
-  }
-
-  .job__apply {
-    width: 8.8125rem;
-    height: 3rem;
   }
 }
 

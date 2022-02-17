@@ -1,0 +1,19 @@
+.job__apply {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 3rem;
+  background-color: var(--accent);
+  color: #ffffff;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+@media (min-width: 600px) {
+  .job__apply {
+    width: 8.8125rem;
+    height: 3rem;
+  }
+}

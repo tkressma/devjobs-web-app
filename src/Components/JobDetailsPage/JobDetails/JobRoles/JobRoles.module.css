@@ -1,0 +1,26 @@
+.job__role_title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  line-height: 25px;
+  color: var(--text-primary);
+}
+
+.job__role_description {
+  margin: 1.75rem 0 1.5rem;
+}
+
+.job__items {
+  padding-left: 1rem;
+  color: var(--accent);
+}
+
+.job__item::marker {
+  content: counter(list-item) "  ";
+  color: var(--accent);
+  font-weight: bold;
+}
+
+.job__item {
+  padding-left: 1rem;
+  color: var(--text-secondary);
+}

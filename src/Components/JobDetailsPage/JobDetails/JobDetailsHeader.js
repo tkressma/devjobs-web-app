@@ -1,5 +1,5 @@
 import styles from "./JobDetailsHeader.module.css";
-import Button from "../../UI/Button";
+import ApplyLink from "../../UI/ApplyLink";
 
 export default function JobDetailsHeader({ job }) {
   return (
@@ -17,7 +17,7 @@ export default function JobDetailsHeader({ job }) {
         <span className={styles["job__location"]}>{job.location}</span>
       </div>
 
-      <Button className={styles["job__apply"]}>Apply Now</Button>
+      <ApplyLink link={job.website} />
     </section>
   );
 }

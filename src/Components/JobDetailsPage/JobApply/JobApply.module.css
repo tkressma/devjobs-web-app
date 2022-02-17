@@ -1,0 +1,8 @@
+.job__apply {
+  position: sticky;
+  width: 100%;
+  background-color: var(--card-bg);
+}
+.job__company_info {
+  color: blue;
+}

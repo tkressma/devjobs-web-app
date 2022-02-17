@@ -1,6 +1,7 @@
 .container {
   width: 87.2%;
   margin: 0 auto;
+  padding-bottom: 3.875rem;
 }
 
 @media (min-width: 768px) {

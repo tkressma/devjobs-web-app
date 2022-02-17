@@ -23,7 +23,6 @@ function App() {
   const [allJobs, setAllJobs] = useState([]);
   // A constantly changing list of jobs based on the users filters
   const [filteredJobs, setFilteredJobs] = useState([]);
-
   // Fetching the JSON data
   useEffect(() => {
     fetch("./data.json")
@@ -35,8 +34,8 @@ function App() {
   }, []);
 
   return (
-    <div className={styles.app} data-theme={theme}>
-      <Router>
+    <Router>
+      <div className={styles.app} data-theme={theme}>
         <Header switchTheme={switchTheme} theme={theme} />
         <Main>
           <Routes>
@@ -56,8 +55,8 @@ function App() {
             />
           </Routes>
         </Main>
-      </Router>
-    </div>
+      </div>
+    </Router>
   );
 }
 
