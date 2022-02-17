@@ -1,17 +1,17 @@
 import styles from "./CompanyBanner.module.css";
-export default function CompanyBanner(props) {
+export default function CompanyBanner({ job }) {
   return (
     <article className={styles["company__banner"]}>
       <figure
         className={styles["company__logo_container"]}
-        style={{ background: "red" }}
+        style={{ background: `${job.logoBackground}` }}
       >
-        <img src="" alt="logo"></img>
+        <img src={`.${job.logo}`} alt={`${job.company} logo`}></img>
       </figure>
 
       <div className={styles["company__details"]}>
-        <h1 className={styles["company__name"]}>Company</h1>
-        <p className={styles["company__website"]}>scoot.com</p>
+        <h1 className={styles["company__name"]}>{job.company}</h1>
+        <p className={styles["company__website"]}>{job.website}</p>
       </div>
 
       <a href="www.example.com" className={styles["company__website_link"]}>

@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import React from "react";
 import ThemeControl from "./ThemeControl";
 import styles from "./Header.module.css";
@@ -7,14 +8,14 @@ function Header(props) {
   return (
     <header className={styles.header}>
       <Container className={styles["header__container"]}>
-        <a href="/">
+        <Link to="/">
           <img
             src={logo}
             alt="DevJobs logo"
             aria-label="Frontendmentor"
             className={styles.logo}
           />
-        </a>
+        </Link>
         <ThemeControl switchTheme={props.switchTheme} theme={props.theme} />
       </Container>
     </header>

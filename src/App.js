@@ -36,10 +36,14 @@ function App() {
 
   return (
     <div className={styles.app} data-theme={theme}>
-      <Header switchTheme={switchTheme} theme={theme} />
-      <Main>
-        <Router>
+      <Router>
+        <Header switchTheme={switchTheme} theme={theme} />
+        <Main>
           <Routes>
+            <Route
+              path="/job/:id"
+              element={<JobDetailsPage jobs={filteredJobs} />}
+            />
             <Route
               path="/"
               element={
@@ -50,10 +54,9 @@ function App() {
                 />
               }
             />
-            <Route path="/job" element={<JobDetailsPage />} />
           </Routes>
-        </Router>
-      </Main>
+        </Main>
+      </Router>
     </div>
   );
 }

@@ -1,6 +1,6 @@
 import styles from "./JobDetails.module.css";
 import JobDetailsHeader from "./JobDetailsHeader";
-export default function JobDetails() {
+export default function JobDetails(props) {
   return (
     <article className={styles["job__details"]}>
       <JobDetailsHeader />
