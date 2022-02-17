@@ -23,7 +23,7 @@
   font-weight: bold;
   line-height: 25px;
   color: var(--text-primary);
-  margin: 0.5rem 0;
+  margin: 0.5rem 00 0.75rem;
 }
 
 .job__location {

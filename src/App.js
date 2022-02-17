@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import useLocalStorage from "use-local-storage";
 import styles from "./App.module.css";
@@ -18,13 +19,37 @@ function App() {
     setTheme(userTheme);
   };
 
+  // Used to keep a constant record of all the available job postings
+  const [allJobs, setAllJobs] = useState([]);
+  // A constantly changing list of jobs based on the users filters
+  const [filteredJobs, setFilteredJobs] = useState([]);
+
+  // Fetching the JSON data
+  useEffect(() => {
+    fetch("./data.json")
+      .then((res) => res.json())
+      .then((data) => {
+        setAllJobs(data);
+        setFilteredJobs(data);
+      });
+  }, []);
+
   return (
     <div className={styles.app} data-theme={theme}>
       <Header switchTheme={switchTheme} theme={theme} />
       <Main>
         <Router>
           <Routes>
-            <Route path="/" element={<HomePage />} />
+            <Route
+              path="/"
+              element={
+                <HomePage
+                  allJobs={allJobs}
+                  filteredJobs={filteredJobs}
+                  setFilteredJobs={setFilteredJobs}
+                />
+              }
+            />
             <Route path="/job" element={<JobDetailsPage />} />
           </Routes>
         </Router>

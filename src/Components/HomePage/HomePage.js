@@ -1,25 +1,12 @@
-import React, { useEffect, useState } from "react";
+import { useState } from "react";
 import styles from "./HomePage.module.css";
 import SearchBar from "./SearchBar/SearchBar";
 import Container from "../UI/Container";
 import JobPostings from "./JobPostings/JobPostings";
 import Button from "../UI/Button";
-export default function HomePage(props) {
-  // Used to keep a constant record of all the available job postings
-  const [allJobs, setAllJobs] = useState([]);
-  // A constantly changing list of jobs based on the users filters
-  const [filteredJobs, setFilteredJobs] = useState([]);
+export default function HomePage({ allJobs, filteredJobs, setFilteredJobs }) {
   // The amount of job postings on the screen at once
   const [visibleJobs, setVisible] = useState(9);
-
-  useEffect(() => {
-    fetch("./data.json")
-      .then((res) => res.json())
-      .then((data) => {
-        setAllJobs(data);
-        setFilteredJobs(data);
-      });
-  }, []);
 
   const showMoreHandler = () => {
     setVisible((prevState) => prevState + 3);
