@@ -2,8 +2,12 @@ import styles from "./JobPosting.module.css";
 import { Link } from "react-router-dom";
 export default function JobPosting({ job }) {
   return (
-    <Link to={`/job/${job.id}`} style={{ textDecoration: "none" }}>
-      <article role="listitem" className={styles["job__posting"]}>
+    <Link
+      to={`/job/${job.id}`}
+      style={{ textDecoration: "none" }}
+      role="listitem"
+    >
+      <article className={styles["job__posting"]}>
         <figure
           className={styles["job__logo_container"]}
           style={{ background: `${job.logoBackground}` }}
