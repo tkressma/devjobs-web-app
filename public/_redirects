@@ -1,2 +1,5 @@
 # Redirects a 404 page to the home page. This is caused by refreshing on a job details page 
-/job/*  /  404
+[[redirects]]
+  from = "/*"
+  to = "/"
+  status = 404 
