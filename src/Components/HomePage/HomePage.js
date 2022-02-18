@@ -6,7 +6,7 @@ import JobPostings from "./JobPostings/JobPostings";
 import Button from "../UI/Button";
 export default function HomePage({ allJobs, filteredJobs, setFilteredJobs }) {
   // The amount of job postings on the screen at once
-  const [visibleJobs, setVisible] = useState(9);
+  const [visibleJobs, setVisible] = useState(12);
 
   const showMoreHandler = () => {
     setVisible((prevState) => prevState + 3);
