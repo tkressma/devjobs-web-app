@@ -1,6 +1,3 @@
 # Redirects a 404 page to the home page. This is caused by refreshing on a job details page 
 /* https://dev-jobs-board.netlify.app/ 404
-
-/job/:id https://dev-jobs-board.netlify.app/ 404
-
-/job/* https://dev-jobs-board.netlify.app/ 404
+/* https://dev-jobs-board.netlify.app/ 200
