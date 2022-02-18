@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import useLocalStorage from "use-local-storage";
 import styles from "./App.module.css";
 import Header from "./Components/Header/Header";
@@ -34,29 +34,27 @@ function App() {
   }, []);
 
   return (
-    <Router>
-      <div className={styles.app} data-theme={theme}>
-        <Header switchTheme={switchTheme} theme={theme} />
-        <Main>
-          <Routes>
-            <Route
-              path="/job/:id"
-              element={<JobDetailsPage jobs={filteredJobs} />}
-            />
-            <Route
-              path="/*"
-              element={
-                <HomePage
-                  allJobs={allJobs}
-                  filteredJobs={filteredJobs}
-                  setFilteredJobs={setFilteredJobs}
-                />
-              }
-            />
-          </Routes>
-        </Main>
-      </div>
-    </Router>
+    <div className={styles.app} data-theme={theme}>
+      <Header switchTheme={switchTheme} theme={theme} />
+      <Main>
+        <Routes>
+          <Route
+            path="/job/:id"
+            element={<JobDetailsPage jobs={filteredJobs} />}
+          />
+          <Route
+            path="/*"
+            element={
+              <HomePage
+                allJobs={allJobs}
+                filteredJobs={filteredJobs}
+                setFilteredJobs={setFilteredJobs}
+              />
+            }
+          />
+        </Routes>
+      </Main>
+    </div>
   );
 }
 

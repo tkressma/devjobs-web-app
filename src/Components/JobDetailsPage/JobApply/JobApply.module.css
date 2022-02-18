@@ -1,8 +1,32 @@
 .job__apply {
-  position: sticky;
+  height: 6rem;
   width: 100%;
   background-color: var(--card-bg);
 }
+
+.job__apply_container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 730px;
+  height: 100%;
+  padding-bottom: 0;
+}
+
 .job__company_info {
-  color: blue;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.job__position {
+  color: var(--text-primary);
+  font-size: 1.25rem;
+  font-weight: bold;
+  line-height: 25px;
+}
+
+.job__parent_company {
+  color: var(--text-secondary);
+  line-height: 20px;
 }
