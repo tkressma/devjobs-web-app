@@ -73,26 +73,23 @@ const proudOfThisFunc = () => {
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
+There are a few areas I would like to focus on moving forward:
 
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+- I would like to implement an API for this project using Node.js and Express. As mentioned earlier, I believe this will solve my "refresh" issue on a specific route param.
+- I plan on furthuring my knowledge of React Router and the hook useNavigation().
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+- [Dark and Light mode](https://css-tricks.com/easy-dark-mode-and-multiple-color-themes-in-react/) - This is how I implemented dark/light mode in my application.
 
 ## Author
 
 - Frontend Mentor - [@tkressma](https://www.frontendmentor.io/profile/tkressma)
 - Twitter - [@tom_kressman](https://www.twitter.com/tom_kressman)
 
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
-
 ## Acknowledgments
 
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
+At the very start of this project, my first goal was to implement a correct color scheme for the application based on the users preferences. This is something I've never done before, so I devled into some resources online that would point me in the right direction. To my surprise, I recently subscribed to [Josh Comeau's](https://www.joshwcomeau.com/) newsletter, and the first email sent to my inbox contained a link to a [fantastic explanation](https://www.joshwcomeau.com/react/dark-mode/) of how to go about implementing this feature. While I ended up using a [different, yet similar approach](https://css-tricks.com/easy-dark-mode-and-multiple-color-themes-in-react/) in my final application, Josh's detailed tutorial was certaintly worth the read!
 
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+One bug I noticed while developing this application was if the user was to scroll down and click on a job posting, the viewport will
+stay in the same position without resetting to the top upon routing to that component. A special thanks to Saeed from StackOverflow for helping me solve this issue. The [solution](https://stackoverflow.com/a/61602724/13158782) he provided is quite short and simple, but works perfectly!

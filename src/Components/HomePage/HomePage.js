@@ -47,6 +47,7 @@ export default function HomePage({ allJobs, filteredJobs, setFilteredJobs }) {
         </Button>
       )}
 
+      {/* If there are no jobs found from the search, display a message */}
       {filteredJobs.length === 0 && (
         <p className={styles["search__error"]}>
           Sorry, no job postings match your search.

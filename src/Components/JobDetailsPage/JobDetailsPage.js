@@ -6,7 +6,6 @@ import JobDetails from "./JobDetails/JobDetails";
 
 export default function JobDetailsPage({ jobs }) {
   const { id } = useParams();
-
   const selectedJobId = Number.parseInt(id, 10);
   const selectedJob = jobs.find((job) => job.id === selectedJobId);
 
