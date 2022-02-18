@@ -8,14 +8,16 @@ function Header(props) {
   return (
     <header className={styles.header}>
       <Container className={styles["header__container"]}>
-        <Link to="/">
-          <img
-            src={logo}
-            alt="DevJobs logo"
-            aria-label="Frontendmentor"
-            className={styles.logo}
-          />
-        </Link>
+        <h1>
+          <Link to="/">
+            <img
+              src={logo}
+              alt="DevJobs logo"
+              aria-label="Frontendmentor"
+              className={styles.logo}
+            />
+          </Link>
+        </h1>
         <ThemeControl switchTheme={props.switchTheme} theme={props.theme} />
       </Container>
     </header>

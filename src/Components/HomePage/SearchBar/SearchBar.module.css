@@ -21,11 +21,15 @@
 
 @media (min-width: 768px) {
   .search__form {
+    padding: 0 1rem 0 1.5rem;
     max-width: none;
   }
 }
 
 @media (min-width: 1200px) {
+  .search__form {
+    padding: 0 1rem 0 2rem;
+  }
   .search__button {
     flex-grow: 1;
     max-width: 123px;
