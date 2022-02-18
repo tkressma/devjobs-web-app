@@ -17,9 +17,12 @@ export default function HomePage({ allJobs, filteredJobs, setFilteredJobs }) {
   const getSearchResults = (searchFilters) => {
     const results = allJobs.filter(
       (job) =>
-        job.position
+        (job.position
           .toLowerCase()
-          .includes(searchFilters.title.toLowerCase()) &&
+          .includes(searchFilters.title.toLowerCase()) ||
+          job.company
+            .toLowerCase()
+            .includes(searchFilters.title.toLowerCase())) &&
         job.location
           .toLowerCase()
           .includes(searchFilters.location.toLowerCase()) &&
