@@ -1,6 +1,6 @@
 .job__posting {
   position: relative;
-  padding: 3.0625rem 2rem 2rem;
+  padding: 3rem 2rem 2rem;
   background: var(--card-bg);
   border-radius: 6px;
 }
@@ -43,7 +43,7 @@
 
 .job__company {
   color: var(--text-secondary);
-  margin-bottom: 40px;
+  margin-bottom: 27px;
 }
 
 .job__location {

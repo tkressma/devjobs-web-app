@@ -3,6 +3,12 @@
   margin: 2rem auto 0;
 }
 
+.search__error {
+  color: var(--text-primary);
+  font-size: 1.25rem;
+  text-align: center;
+}
+
 @media (min-width: 768px) {
   .button__loadmore {
     margin-top: 3.5rem;

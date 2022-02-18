@@ -43,6 +43,12 @@ export default function HomePage({ allJobs, filteredJobs, setFilteredJobs }) {
           Load More
         </Button>
       )}
+
+      {filteredJobs.length === 0 && (
+        <p className={styles["search__error"]}>
+          Sorry, no job postings match your search.
+        </p>
+      )}
     </Container>
   );
 }
