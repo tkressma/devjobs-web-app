@@ -51,31 +51,17 @@ Users should be able to:
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+This project was a great learning experience. As I continue to build out these projects, I become more confident in my HTML and CSS, as well as my React project structuring and interconnectedness. Here are my main takeaways:
 
-To see how you can add code snippets, see below:
-
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
-
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
-
-```js
-const proudOfThisFunc = () => {
-  console.log("🎉");
-};
-```
+- CSS variables are awesome! I was aware of them for quite a while, but moving forward I expect to use them in every project.
+- This is one of my first projects utilizing React Router. While it is quick to pick up, I feel like there are many quirks to it that I still have to become aware of (useNavigator - I'm looking at you).
+- The useContext along with useMemo is useful in very particular situations. Unfortunately, these hooks did not make it into my final application, since they didnt solve the issue I was facing (see below).
 
 ### Continued development
 
 There are a few areas I would like to focus on moving forward:
 
-- I would like to implement an API for this project using Node.js and Express. As mentioned earlier, I believe this will solve my "refresh" issue on a specific route param.
+- I would like to implement an API for this project using Node.js and Express. This project contains one issue that I tried many, many hours to fix: upon visiting the details page for a job posting, if the user refreshes the page, the app crashes and a 404 error is returned. In an attempt to fix this issue, I tried storing the current job being viewed in local storage. This worked, however a new issue was brought up: after refreshing the page and returning to the home menu, no jobs are displayed at all. I also reworked my entire code base to use the useContext hook, which ended up with the same issue. I believe the only way to allow for data to truly persist in this web application is by creating and using some backend web server with a database.
 - I plan on furthuring my knowledge of React Router and the hook useNavigation().
 
 ### Useful resources
