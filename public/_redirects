@@ -1,5 +1,0 @@
-# Redirects a 404 page to the home page. This is caused by refreshing on a job details page 
-/* https://dev-jobs-board.netlify.app/ 404
-/* https://dev-jobs-board.netlify.app/ 200
-/jobs/:id https://dev-jobs-board.netlify.app/ 404
-/jobs/* https://dev-jobs-board.netlify.app/ 404
