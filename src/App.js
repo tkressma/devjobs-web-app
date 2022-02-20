@@ -20,7 +20,7 @@ function App() {
   };
 
   // Used to keep a constant record of all the available job postings
-  const [allJobs, setAllJobs] = useState([]);
+  let allJobs;
   // A constantly changing list of jobs based on the users filters
   const [filteredJobs, setFilteredJobs] = useState([]);
   // Fetching the JSON data
@@ -28,7 +28,7 @@ function App() {
     fetch("./data.json")
       .then((res) => res.json())
       .then((data) => {
-        setAllJobs(data);
+        allJobs = data;
         setFilteredJobs(data);
       });
   }, []);
